@@ -1,0 +1,22 @@
+[Unit]
+Description=Unio's distributed currency daemon
+After=network.target
+
+[Service]
+User=uniocore
+Group=uniocore
+
+Type=forking
+PIDFile=/var/lib/uniod/uniod.pid
+ExecStart=/usr/bin/uniod -daemon -pid=/var/lib/uniod/uniod.pid \
+-conf=/etc/uniocore/unio.conf -datadir=/var/lib/uniod -disablewallet
+
+Restart=always
+PrivateTmp=true
+TimeoutStopSec=60s
+TimeoutStartSec=2s
+StartLimitInterval=120s
+StartLimitBurst=5
+
+[Install]
+WantedBy=multi-user.target

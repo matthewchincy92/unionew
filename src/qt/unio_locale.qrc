@@ -1,0 +1,20 @@
+<!DOCTYPE RCC><RCC version="1.0">
+    <qresource prefix="/translations">
+        <file alias="bg">locale/unio_bg.qm</file>
+        <file alias="de">locale/unio_de.qm</file>
+        <file alias="en">locale/unio_en.qm</file>
+        <file alias="es">locale/unio_es.qm</file>
+        <file alias="fi">locale/unio_fi.qm</file>
+        <file alias="fr">locale/unio_fr.qm</file>
+        <file alias="it">locale/unio_it.qm</file>
+        <file alias="ja">locale/unio_ja.qm</file>
+        <file alias="pl">locale/unio_pl.qm</file>
+        <file alias="pt">locale/unio_pt.qm</file>
+        <file alias="ru">locale/unio_ru.qm</file>
+        <file alias="sk">locale/unio_sk.qm</file>
+        <file alias="sv">locale/unio_sv.qm</file>
+        <file alias="vi">locale/unio_vi.qm</file>
+        <file alias="zh_CN">locale/unio_zh_CN.qm</file>
+        <file alias="zh_TW">locale/unio_zh_TW.qm</file>
+    </qresource>
+</RCC>

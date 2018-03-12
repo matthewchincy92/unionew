@@ -1,0 +1,12 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=Unio
+Comment=Unio P2P Cryptocurrency
+Comment[fr]=Unio, monnaie virtuelle cryptographique pair à pair
+Comment[tr]=Unio, eşten eşe kriptografik sanal para birimi
+Exec=unio-qt %u
+Terminal=false
+Type=Application
+Icon=unio128
+MimeType=x-scheme-handler/unio;
+Categories=Office;Finance;

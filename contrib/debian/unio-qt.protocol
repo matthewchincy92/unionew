@@ -1,0 +1,11 @@
+[Protocol]
+exec=unio-qt '%u'
+protocol=unio
+input=none
+output=none
+helper=true
+listing=
+reading=false
+writing=false
+makedir=false
+deleting=false
