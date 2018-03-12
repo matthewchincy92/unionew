@@ -127,10 +127,10 @@ public:
          * The characters are rarely used upper ASCII, not valid as UTF-8, and produce
          * a large 32-bit integer with any alignment.
          */
-        pchMessageStart[0] = 0xbf;
-        pchMessageStart[1] = 0x0c;
-        pchMessageStart[2] = 0x6b;
-        pchMessageStart[3] = 0xbd;
+        pchMessageStart[0] = 0xba;
+        pchMessageStart[1] = 0x3c;
+        pchMessageStart[2] = 0x2b;
+        pchMessageStart[3] = 0xef;
         vAlertPubKey = ParseHex("0439a86835d621d38f5ddb99c2c3cf5dcd6ca5b192d09749138dd700590a129b24661056961ac0e4613884181df1e0046c7681741ac3843bab5d5166d852fdfcd6");
         nDefaultPort = 9838;
         nMaxTipAge = 6 * 60 * 60; // ~144 blocks behind -> 2 x fork detection time, was 24 * 60 * 60 in bitcoin
@@ -142,10 +142,10 @@ public:
         assert(consensus.hashGenesisBlock == uint256S("0x0000063978407b187bcf7dfffa4c1d4971573a5a03160281660d9d0fe41bcbe7"));
         assert(genesis.hashMerkleRoot == uint256S("0xb0fd7061a0e9b1641a7536e30b573523d20c4d9c6dab7881097a03eb7cb513c0"));
 
-        // Unio addresses start with 'X'
-        base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,76);
-        // Unio script addresses start with '7'
-        base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1,16);
+        // Unio addresses start with 'U'
+        base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,68);
+        // Unio script addresses start with '8'
+        base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1,18);
         // Unio private keys start with '7' or 'X'
         base58Prefixes[SECRET_KEY] =     std::vector<unsigned char>(1,204);
         // Unio BIP32 pubkeys start with 'xpub' (Bitcoin defaults)
@@ -237,10 +237,10 @@ public:
         // By default assume that the signatures in ancestors of this block are valid.
         consensus.defaultAssumeValid = uint256S("0x0000000004f5aef732d572ff514af99a995702c92e4452c7af10858231668b1f"); // 37900
 
-        pchMessageStart[0] = 0xce;
-        pchMessageStart[1] = 0xe2;
-        pchMessageStart[2] = 0xca;
-        pchMessageStart[3] = 0xff;
+        pchMessageStart[0] = 0xd3;
+        pchMessageStart[1] = 0x41;
+        pchMessageStart[2] = 0xba;
+        pchMessageStart[3] = 0xdf;
         vAlertPubKey = ParseHex("0429e80e544f30d71c3c5b99c04ce6a15d751a86f4b3815583da37c658086bed18357f7e54d56a7fd63f5b1d660034b9b56ec4378f041dfd19b2bef5e076c91e5a");
         nDefaultPort = 19838;
         nMaxTipAge = 0x7fffffff; // allow mining on top of old blocks for testnet
@@ -252,10 +252,10 @@ public:
         assert(consensus.hashGenesisBlock == uint256S("0x00000606ead84622058a6719de6789eddf20110264fc55de11a19c64244a2a1f"));
         assert(genesis.hashMerkleRoot == uint256S("0xb0fd7061a0e9b1641a7536e30b573523d20c4d9c6dab7881097a03eb7cb513c0"));
 
-        // Testnet Unio addresses start with 'y'
-        base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,140);
-        // Testnet Unio script addresses start with '8' or '9'
-        base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1,19);
+        // Testnet Unio addresses start with 'u'
+        base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,130);
+        // Testnet Unio script addresses start with '7' or '8'
+        base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1,17);
         // Testnet private keys start with '9' or 'c' (Bitcoin defaults)
         base58Prefixes[SECRET_KEY] =     std::vector<unsigned char>(1,239);
         // Testnet Unio BIP32 pubkeys start with 'tpub' (Bitcoin defaults)
@@ -343,10 +343,10 @@ public:
         // By default assume that the signatures in ancestors of this block are valid.
         consensus.defaultAssumeValid = uint256S("0x00");
 
-        pchMessageStart[0] = 0xfc;
-        pchMessageStart[1] = 0xc1;
-        pchMessageStart[2] = 0xb7;
-        pchMessageStart[3] = 0xdc;
+        pchMessageStart[0] = 0xfe;
+        pchMessageStart[1] = 0xf1;
+        pchMessageStart[2] = 0xe7;
+        pchMessageStart[3] = 0xf8;
         nMaxTipAge = 6 * 60 * 60; // ~144 blocks behind -> 2 x fork detection time, was 24 * 60 * 60 in bitcoin
         nDelayGetHeadersTime = 0; // never delay GETHEADERS in regtests
         nDefaultPort = 19888;
@@ -375,10 +375,10 @@ public:
             0,
             0
         };
-        // Regtest Unio addresses start with 'y'
-        base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,140);
-        // Regtest Unio script addresses start with '8' or '9'
-        base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1,19);
+          // Testnet Unio addresses start with 'u'
+        base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,130);
+        // Testnet Unio script addresses start with '7' or '8'
+        base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1,17);
         // Regtest private keys start with '9' or 'c' (Bitcoin defaults)
         base58Prefixes[SECRET_KEY] =     std::vector<unsigned char>(1,239);
         // Regtest Unio BIP32 pubkeys start with 'tpub' (Bitcoin defaults)
