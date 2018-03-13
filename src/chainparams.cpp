@@ -156,7 +156,9 @@ public:
         // Unio BIP44 coin type is '5'
         nExtCoinType = 5;
 
-        vFixedSeeds = std::vector<SeedSpec6>(pnSeed6_main, pnSeed6_main + ARRAYLEN(pnSeed6_main));
+        //vFixedSeeds = std::vector<SeedSpec6>(pnSeed6_main, pnSeed6_main + ARRAYLEN(pnSeed6_main));
+	vFixedSeeds.clear(); //! Regtest mode doesn't have any fixed seeds.
+        vSeeds.clear();  //! Regtest mode doesn't have any DNS seeds.
 
         fMiningRequiresPeers = true;
         fDefaultConsistencyChecks = false;
@@ -266,7 +268,9 @@ public:
         // Testnet Unio BIP44 coin type is '1' (All coin's testnet default)
         nExtCoinType = 1;
 
-        vFixedSeeds = std::vector<SeedSpec6>(pnSeed6_test, pnSeed6_test + ARRAYLEN(pnSeed6_test));
+        //vFixedSeeds = std::vector<SeedSpec6>(pnSeed6_test, pnSeed6_test + ARRAYLEN(pnSeed6_test));
+	vFixedSeeds.clear(); //! Regtest mode doesn't have any fixed seeds.
+        vSeeds.clear();  //! Regtest mode doesn't have any DNS seeds.
 
         fMiningRequiresPeers = true;
         fDefaultConsistencyChecks = false;
