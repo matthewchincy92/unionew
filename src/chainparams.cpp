@@ -356,9 +356,9 @@ public:
         nDefaultPort = 19888;
         nPruneAfterHeight = 1000;
 
-        genesis = CreateGenesisBlock(1521436655, 0, 0x207fffff, 1, 5 * COIN);
+        genesis = CreateGenesisBlock(1521436655, 1, 0x207fffff, 1, 5 * COIN);
         consensus.hashGenesisBlock = genesis.GetHash();
-        assert(consensus.hashGenesisBlock == uint256S("0x19d46c9efab3b371a54bb1e0378016905cf52d2a160561443f7de3935082bc6a"));
+        assert(consensus.hashGenesisBlock == uint256S("0x78e4193424977da7ddc15b71167c12ade4bc1cad86b8e9ebc7439fb4a4134f23"));
         assert(genesis.hashMerkleRoot == uint256S("0x3aa69fb65407f9be1e732eba7717088499b1d99427f3d9b5bf8dbfd2648f47dc"));
 
         vFixedSeeds.clear(); //! Regtest mode doesn't have any fixed seeds.
@@ -374,7 +374,7 @@ public:
 
         checkpointData = (CCheckpointData){
             boost::assign::map_list_of
-            ( 0, uint256S("0x19d46c9efab3b371a54bb1e0378016905cf52d2a160561443f7de3935082bc6a")),
+            ( 0, uint256S("0x78e4193424977da7ddc15b71167c12ade4bc1cad86b8e9ebc7439fb4a4134f23")),
             0,
             0,
             0
