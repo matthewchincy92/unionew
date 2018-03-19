@@ -137,9 +137,9 @@ public:
         nDelayGetHeadersTime = 24 * 60 * 60;
         nPruneAfterHeight = 100000;
 
-        genesis = CreateGenesisBlock(1521433617, 1516208, 0x1e0ffff0, 1, 5 * COIN);
+        genesis = CreateGenesisBlock(1521435924, 452027, 0x1e0ffff0, 1, 5 * COIN);
         consensus.hashGenesisBlock = genesis.GetHash();
-        assert(consensus.hashGenesisBlock == uint256S("0x000004516fea27a545a597ea4be9a096913e79840afe9aa166655fb5e6fbce87"));
+        assert(consensus.hashGenesisBlock == uint256S("0x0000004c7c5c51153240a58fea4a6e7c628f67f4ea59cf5db9142040c0f46855"));
         assert(genesis.hashMerkleRoot == uint256S("0xa2386d06dd9c293ff6e9683e672225db1f00892691e0afb15a7e94fffccad897"));
 
         // Unio addresses start with 'U'
@@ -172,8 +172,8 @@ public:
 
         checkpointData = (CCheckpointData) {
             boost::assign::map_list_of
-            (  0, uint256S("0x000004516fea27a545a597ea4be9a096913e79840afe9aa166655fb5e6fbce87")),
-            1521433617, // * UNIX timestamp of last checkpoint block
+            (  0, uint256S("0x0000004c7c5c51153240a58fea4a6e7c628f67f4ea59cf5db9142040c0f46855")),
+            1521435924, // * UNIX timestamp of last checkpoint block
             0,    // * total number of transactions between genesis and last checkpoint
                         //   (the tx=... number in the SetBestChain debug.log lines)
             1.0        // * estimated number of transactions per day after checkpoint
