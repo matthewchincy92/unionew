@@ -1,4 +1,4 @@
----
+'---
 name: "unio-raspberry-0.12"
 enable_cache: true
 suites:
@@ -17,7 +17,7 @@ packages:
 - "binutils-gold"
 reference_datetime: "2017-01-01 00:00:00"
 remotes:
-- "url": "https://github.com/uniocoin/unio.git"
+- "url": "https://github.com/uniocoin/unionew.git"
   "dir": "unio"
 files:
 - "raspberrypi-tools.tar.gz"
