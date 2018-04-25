@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 prefix=/
+=======
+prefix=/home/wtech/unionew/depends/i686-w64-mingw32
+>>>>>>> 52087d8ed563f4b89db9573d1bd0c03a81760357
 exec_prefix=${prefix}
 libdir=${exec_prefix}/lib
 includedir=${prefix}/include
