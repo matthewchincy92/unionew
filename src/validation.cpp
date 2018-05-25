@@ -1240,12 +1240,12 @@ CAmount GetBlockSubsidy(int nPrevBits, int nPrevHeight, const Consensus::Params&
         dDiff = ConvertBitsToDouble(nPrevBits);
     }
 
-    if (nPrevHeight < 1149) { // old is 1149
-	nSubsidyBase = 23500; // old is 23500 // Pre-mine 27M
+    if (nPrevHeight < 100) { // old is 1149
+	nSubsidyBase = 1000000; // old is 870322 // Pre-mine 10B
     }
-    else if(nPrevHeight < 11773440){
+    else if(nPrevHeight < 500){
     	nSubsidyBase = (2222222.0 / (pow((dDiff+2600.0)/9.0,2.0)));
-        if(nSubsidyBase > 5) nSubsidyBase = 5; // Maximum 5 UOC Block Rewards
+        if(nSubsidyBase > 2250000) nSubsidyBase = 2250000; // Maximum 100 UOC Block Rewards (2250000 is testing)
         // else if(nSubsidyBase < 1) nSubsidyBase = 1;
 	else if(nSubsidyBase < 1) nSubsidyBase = nSubsidyBase;
     }else{
@@ -1277,7 +1277,7 @@ CAmount GetBlockSubsidy(int nPrevBits, int nPrevHeight, const Consensus::Params&
     // yearly decline of production by ~7.1% per year, projected ~18M coins max by year 2050+.
     for (int i = consensusParams.nSubsidyHalvingInterval; i <= nPrevHeight; i += consensusParams.nSubsidyHalvingInterval) {
         // nSubsidy -= nSubsidy/14;
-	nSubsidy *= 0.9439033159;
+	nSubsidy *= 0.9439033159; // old is 0.9439033159
     }
 
     // Hard fork to reduce the block reward by 10 extra percent (allowing budget/superblocks)
