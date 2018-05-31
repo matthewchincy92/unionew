@@ -1244,10 +1244,11 @@ CAmount GetBlockSubsidy(int nPrevBits, int nPrevHeight, const Consensus::Params&
 	nSubsidyBase = 1000000; // old is 870322 // Pre-mine 10B
     }
     else if(nPrevHeight < 500){
-    	nSubsidyBase = (2222222.0 / (pow((dDiff+2600.0)/9.0,2.0)));
-        if(nSubsidyBase > 2250000) nSubsidyBase = 2250000; // Maximum 100 UOC Block Rewards (2250000 is testing)
+    	// nSubsidyBase = (2222222.0 / (pow((dDiff+2600.0)/9.0,2.0)));
+        // if(nSubsidyBase > 2250000) nSubsidyBase = 2250000; // Maximum 100 UOC Block Rewards (2250000 is testing)
         // else if(nSubsidyBase < 1) nSubsidyBase = 1;
-	else if(nSubsidyBase < 1) nSubsidyBase = nSubsidyBase;
+	// else if(nSubsidyBase < 1) nSubsidyBase = nSubsidyBase;
+	nSubsidyBase=2250000;
     }else{
 	nSubsidyBase=0;
     }
