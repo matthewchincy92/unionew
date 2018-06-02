@@ -139,8 +139,8 @@ public:
 
         genesis = CreateGenesisBlock(1527925934, 4522787, 0x1e0ffff0, 1, 100 * COIN);
         consensus.hashGenesisBlock = genesis.GetHash();
-        assert(consensus.hashGenesisBlock == uint256S("0xd6eb20bad5ca070cc18668b6d67b5d074645cf8ee4ba4c93013f4616a1f91d18"));
-        assert(genesis.hashMerkleRoot == uint256S("0x3877716a534238ba0abce669e68582d8847ff26b4aab9fe93bafa853fb132f02"));
+        assert(consensus.hashGenesisBlock == uint256S("0x00000e4d70d4b33f1f638ae89d81525cbfb3ede36c2b8080cffd0d08ca96cdda"));
+        assert(genesis.hashMerkleRoot == uint256S("0xd6eb20bad5ca070cc18668b6d67b5d074645cf8ee4ba4c93013f4616a1f91d18"));
 
         // Unio addresses start with 'U'
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,68);
