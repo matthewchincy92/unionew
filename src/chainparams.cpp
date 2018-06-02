@@ -51,7 +51,7 @@ static CBlock CreateGenesisBlock(const char* pszTimestamp, const CScript& genesi
  */
 static CBlock CreateGenesisBlock(uint32_t nTime, uint32_t nNonce, uint32_t nBits, int32_t nVersion, const CAmount& genesisReward)
 {
-    const char* pszTimestamp = "31/May/2018, U.N. reports unprecedented fighting in Libyan city of Derna";
+    const char* pszTimestamp = "2/June/2018, Hawaii volcano eruption enters new phase as crater falls quiet";
     const CScript genesisOutputScript = CScript() << ParseHex("0429e80e544f30d71c3c5b99c04ce6a15d751a86f4b3815583da37c658086bed18357f7e54d56a7fd63f5b1d660034b9b56ec4378f041dfd19b2bef5e076c91e5a") << OP_CHECKSIG;
     return CreateGenesisBlock(pszTimestamp, genesisOutputScript, nTime, nNonce, nBits, nVersion, genesisReward);
 }
@@ -72,7 +72,7 @@ class CMainParams : public CChainParams {
 public:
     CMainParams() {
         strNetworkID = "main";
-        consensus.nSubsidyHalvingInterval = 210240; // old value is 210240 // Note: actual number of blocks per calendar year with DGW v3 is ~200700 (for example 449750 - 249050)
+        consensus.nSubsidyHalvingInterval = 400; // old value is 210240 // Note: actual number of blocks per calendar year with DGW v3 is ~200700 (for example 449750 - 249050)
         consensus.nMasternodePaymentsStartBlock = 150; // old value is 100000 // not true, but it's ok as long as it's less then nMasternodePaymentsIncreaseBlock
         consensus.nMasternodePaymentsIncreaseBlock = 200; // old value is 158000 // actual historical value (OBSOLETE)
         consensus.nMasternodePaymentsIncreasePeriod = 576*30; // 17280 - actual historical value (OBSOLETE)
@@ -137,9 +137,9 @@ public:
         nDelayGetHeadersTime = 24 * 60 * 60;
         nPruneAfterHeight = 100000;
 
-        genesis = CreateGenesisBlock(1527756384, 1355899, 0x1e0ffff0, 1, 100 * COIN);
+        genesis = CreateGenesisBlock(1527925934, 4522787, 0x1e0ffff0, 1, 100 * COIN);
         consensus.hashGenesisBlock = genesis.GetHash();
-        assert(consensus.hashGenesisBlock == uint256S("0x00000e28bd6543a2cf54fce2eba5e31070f9ebc95b59ed0f7bfa91aa2034b7f7"));
+        assert(consensus.hashGenesisBlock == uint256S("0xd6eb20bad5ca070cc18668b6d67b5d074645cf8ee4ba4c93013f4616a1f91d18"));
         assert(genesis.hashMerkleRoot == uint256S("0x3877716a534238ba0abce669e68582d8847ff26b4aab9fe93bafa853fb132f02"));
 
         // Unio addresses start with 'U'
@@ -172,8 +172,8 @@ public:
 
         checkpointData = (CCheckpointData) {
             boost::assign::map_list_of
-            (  0, uint256S("0x00000e28bd6543a2cf54fce2eba5e31070f9ebc95b59ed0f7bfa91aa2034b7f7")),
-            1527756384, // * UNIX timestamp of last checkpoint block
+            (  0, uint256S("0x00000e4d70d4b33f1f638ae89d81525cbfb3ede36c2b8080cffd0d08ca96cdda")),
+            1527925934, // * UNIX timestamp of last checkpoint block
             1,    // * total number of transactions between genesis and last checkpoint
                         //   (the tx=... number in the SetBestChain debug.log lines)
             1.0        // * estimated number of transactions per day after checkpoint
@@ -249,10 +249,10 @@ public:
         nDelayGetHeadersTime = 24 * 60 * 60;
         nPruneAfterHeight = 1000;
 
-        genesis = CreateGenesisBlock(1527756571UL, 1153372UL, 0x1e0ffff0, 1, 100 * COIN);
+        genesis = CreateGenesisBlock(1527926355UL, 1846369UL, 0x1e0ffff0, 1, 100 * COIN);
         consensus.hashGenesisBlock = genesis.GetHash();
-        assert(consensus.hashGenesisBlock == uint256S("0x0000021bfdb0bce37265e1276dba5b240f3d17e6345e46c784c60dd58a6ed83c"));
-        assert(genesis.hashMerkleRoot == uint256S("0x3877716a534238ba0abce669e68582d8847ff26b4aab9fe93bafa853fb132f02"));
+        assert(consensus.hashGenesisBlock == uint256S("0x00000b1658f8f57e50bd6c3e78590be0efdf2f8e966f9dd1a10e6c7d5ab5668c"));
+        assert(genesis.hashMerkleRoot == uint256S("0xd6eb20bad5ca070cc18668b6d67b5d074645cf8ee4ba4c93013f4616a1f91d18"));
 
         // Testnet Unio addresses start with 'u'
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,130);
@@ -284,8 +284,8 @@ public:
 
         checkpointData = (CCheckpointData) {
             boost::assign::map_list_of
-            (    0, uint256S("0x0000021bfdb0bce37265e1276dba5b240f3d17e6345e46c784c60dd58a6ed83c")),
-            1527756571, // * UNIX timestamp of last checkpoint block
+            (    0, uint256S("0x00000b1658f8f57e50bd6c3e78590be0efdf2f8e966f9dd1a10e6c7d5ab5668c")),
+            1527926355, // * UNIX timestamp of last checkpoint block
             0,       // * total number of transactions between genesis and last checkpoint
                         //   (the tx=... number in the SetBestChain debug.log lines)
             1.0         // * estimated number of transactions per day after checkpoint
@@ -355,10 +355,10 @@ public:
         nDefaultPort = 19888;
         nPruneAfterHeight = 1000;
 
-        genesis = CreateGenesisBlock(1527756799, 0, 0x207fffff, 1, 100 * COIN);
+        genesis = CreateGenesisBlock(1527926578, 0, 0x207fffff, 1, 100 * COIN);
         consensus.hashGenesisBlock = genesis.GetHash();
-        assert(consensus.hashGenesisBlock == uint256S("0x0a5fb9f8b9350fb85da741fe58099f18f3c94bc9e6173212a72b5e285851c966"));
-        assert(genesis.hashMerkleRoot == uint256S("0x3877716a534238ba0abce669e68582d8847ff26b4aab9fe93bafa853fb132f02"));
+        assert(consensus.hashGenesisBlock == uint256S("0x275c67d84dd6ffea1168d8f44ebbf63916ae3645e5c9d9cba2088598a4b26cb3"));
+        assert(genesis.hashMerkleRoot == uint256S("0xd6eb20bad5ca070cc18668b6d67b5d074645cf8ee4ba4c93013f4616a1f91d18"));
 
         vFixedSeeds.clear(); //! Regtest mode doesn't have any fixed seeds.
         vSeeds.clear();  //! Regtest mode doesn't have any DNS seeds.
@@ -373,8 +373,8 @@ public:
 
         checkpointData = (CCheckpointData){
             boost::assign::map_list_of
-            ( 0, uint256S("0x0a5fb9f8b9350fb85da741fe58099f18f3c94bc9e6173212a72b5e285851c966")),
-            1527756799,
+            ( 0, uint256S("0x275c67d84dd6ffea1168d8f44ebbf63916ae3645e5c9d9cba2088598a4b26cb3")),
+            1527926578,
             0,
             1.0
         };
