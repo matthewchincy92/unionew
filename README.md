@@ -3,7 +3,7 @@ Unio Core staging tree 0.12.2
 
 `master:` [![Build Status](https://travis-ci.org/uniocoin/unio.svg?branch=master)](https://travis-ci.org/uniocoin/unio) `develop:` [![Build Status](https://travis-ci.org/uniocoin/unio.svg?branch=develop)](https://travis-ci.org/uniocoin/unio/branches)
 
-https://www.unio.org
+https://www.unio.tech
 
 
 What is Unio?
@@ -16,7 +16,7 @@ are carried out collectively by the network. Unio Core is the name of the open
 source software which enables the use of this currency.
 
 For more information, as well as an immediately useable, binary version of
-the Unio Core software, see https://www.unio.org/get-unio/.
+the Unio Core software, see https://www.unio.tech/get-unio/.
 
 
 License
@@ -74,4 +74,4 @@ Translations are periodically pulled from Transifex and merged into the git repo
 **Important**: We do not accept translation changes as GitHub pull requests because the next
 pull from Transifex would automatically overwrite them again.
 
-Translators should also follow the [forum](https://www.unio.org/forum/topic/unio-worldwide-collaboration.88/).
+Translators should also follow the [forum](https://www.unio.tech/forum/topic/unio-worldwide-collaboration.88/).
